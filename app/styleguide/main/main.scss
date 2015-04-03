@@ -1,0 +1,60 @@
+.dashboard.main {
+
+  .header {
+    h1 {
+      @include upperCase;
+      text-align: center;
+      color: $green3;
+    }
+  }
+
+  .small_line_break {
+    width: 40px;
+    border-bottom: 1px solid $green3;
+    margin: 40px auto;
+  }
+
+  .chart-wrapper {
+    background: none;
+    padding: 10px;
+  }
+
+  .donut_inner {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+
+    .chart_icon {
+      margin-top: 5px;
+    }
+
+    .chart_num {
+      @include futuraLight;
+      font-style: italic;
+      font-size: 3.2em;
+      margin-top: 15px;
+    }
+
+    .chart_name {
+      @include futuraBold;
+      @include upperCase;
+      font-size: 12px;
+      padding-top: 0;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: $mid2;
+      text-align: center;
+    }
+
+    .chart_percent {
+      @include futuraLight;
+      font-style: italic;
+      font-size: 14px;
+    }
+  }
+
+  .status_text {
+    padding-top: 25px;
+  }
+}

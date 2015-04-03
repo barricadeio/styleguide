@@ -1,0 +1,73 @@
+html, body {
+  font-size: $base-font-size;
+  background: $light1;
+  @include futuraRegular;
+}
+
+form,
+.form-controls {
+
+  .form-control {
+    margin-bottom: 1.25rem;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="color"],
+  textarea,
+  select {
+    @include futuraRegular;
+    @include normCase;
+    letter-spacing: 0.075em;
+
+    // user input color
+    color: $mid5;
+
+    // placeholder input color
+    &::-webkit-input-placeholder {
+       color: $mid4;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: $mid4;
+    }
+    &:-ms-input-placeholder {
+       color: $mid4;
+    }
+
+    // placeholder active color
+    &:active,
+    &:focus {
+      color: $dark1;
+
+      &::-webkit-input-placeholder {
+         color: $light1;
+      }
+      &::-moz-placeholder {  /* Firefox 19+ */
+         color: $light1;
+      }
+      &:-ms-input-placeholder {
+         color: $light1;
+      }
+    }
+  }
+
+  label {
+    @include futuraRegular;
+    line-height: 2;
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+}

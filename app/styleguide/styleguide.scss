@@ -1,0 +1,561 @@
+/* Styleguide Doc Pages */
+//
+// 1. Base Layout
+// 2. Animations
+// 3. Sidebar Menu
+// 4. Sticky Footer
+// 5. Colour Palette
+//
+
+
+// 1.
+// Base Layout
+//
+.full-width {
+  width: 100%;
+}
+
+.styleguide,
+.styleguide-footer {
+
+  .row {
+    max-width: 65rem;
+  }
+
+  a {
+    @include transition(all, 0.3s, ease-in-out);
+    border-bottom: 0.25em solid transparent;
+
+    // link hover underline effect
+    &:hover {
+      color: $green1;
+      border-bottom: 0.1em solid lighten($green1, 20%);
+    }
+
+    &:active {
+      background: $light3;
+    }
+  }
+
+  ::selection {
+    background: $green1;
+    color: white;
+  }
+  ::-moz-selection {
+    background: $green1;
+    color: white;
+  }
+}
+
+.styleguide {
+
+  .column {
+    // top and bottom of page
+    padding-top: 3rem;
+    padding-bottom: 10em; //offset against height of sticky footer
+
+    h1.jumbotron {
+      margin-bottom: 5.5rem;
+      color: $mid5;
+      @include normCase;
+    }
+
+    .btn-row {
+      background-color: transparent;
+      border-top: 2px solid $light2;
+      margin: $base-vertical-space 0;
+      padding: 1rem 0;
+
+      button {
+        width: auto;
+      }
+    }
+  }
+}
+
+
+// 2.
+// Animations
+//
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+// 3.
+// Sidebar Menu
+//
+.styleguide {
+  @include futuraLight;
+
+  .sidebar,
+  ul,
+  li,
+  a {
+    @include transition(all, 0.5s, ease-in-out);
+  }
+
+  .sidebar {
+    position: fixed;
+    z-index: 400;
+    height: 100%;
+    left: 0;
+    border-left: 4px solid darken($light2, 10%);
+    background-color: darken($light1, 2.5%);
+
+    @include keyframes(logoBG) {
+      0%   {
+        background-position: 0 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    h1 {
+      display: block;
+      background-color: $bgreen;
+      padding: 0;
+      margin: 0 0 0 -4px;
+      text-align: center;
+      background-image: url('../../components/styles/styleguide/assets/green-background.jpg');
+      background-size: auto 100%;
+      background-position: 0 50%;
+      @include transition(all, 0.3s, ease-in-out);
+
+      a {
+        border: none !important;
+        display: inline-block;
+        width: 100%;
+      }
+
+      span {
+        position: absolute;
+        left: -999em;
+      }
+      img {
+        margin: 1em auto 1.125em;
+      }
+
+      &:hover {
+        @include animation(logoBG 1s linear infinite);
+        opacity: 0.9;
+      }
+    }
+
+    ul.side-nav {
+      padding: 0;
+      margin-left: -4px;
+
+      li {
+        list-style: none;
+        margin: 0;
+        border-left: 4px solid transparent;
+
+        &:hover {
+          border-color: $green1;
+        }
+
+        li,
+        li:hover {
+          border: none;
+        }
+
+        a {
+          @include futuraRegular;
+          border-bottom: none;
+          color: $dark1;
+          padding: 0.75em 2.5em;
+          background-color: transparent;
+
+          &:hover {
+            background-color: darken($light2, 2.5%);
+            color: $dark5;
+          }
+        }
+
+        &.divider {
+          border: none;
+        }
+
+        &.heading {
+          font-size: 1.25em;
+          text-transform: none;
+
+          a {
+            padding: 0.5em 1.5em;
+          }
+
+          &:first-child {
+            padding-top: 25%;
+          }
+
+          //animate in the nav sections
+          @include keyframes(fadeinSGSidebar) {
+            0%   {
+              height: 0px;
+              overflow: hidden;
+              opacity: 0;
+            }
+            100% {
+              height: auto;
+              overflow: hidden;
+              opacity: 1;
+            }
+          }
+
+          ul {
+            @include animation('fadeinSGSidebar 0.5s 1');
+            display: none;
+            margin: 0;
+            border: none;
+          }
+        }
+
+        &.active {
+          border-left-color: $mid4;
+
+          a {
+            color: $bgreen;
+
+            &:first-child:not(button) {
+              @include futuraRegular;
+            }
+          }
+
+          ul {
+            display: block;
+            padding-bottom: 1em;
+
+            li a {
+              padding: 0.333em 0 0.333em 3em;
+              color: $mid4;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1400px) {
+      position: relative;
+      left: auto;
+      margin-left: -60px;
+      border: none;
+      background-color: transparent;
+
+      ul.side-nav li {
+        border: none !important;
+
+        &.heading.active {
+          a {
+            border-left: 4px solid lighten($light1, 1%);
+            background: white;
+          }
+
+          li {
+            a {
+              background: white;
+              padding-left: 2.5em;
+            }
+
+            &:last-child a {
+              padding-bottom: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 4. Sticky Footer
+body div.ng-scope:first-child,
+.full-width {
+  height: 100%;
+  min-height: 100%;
+}
+
+.scroll-container {
+  min-height: 100%;
+}
+
+.styleguide-footer {
+  margin-top: -6em;
+  height: 6em;
+  position: relative;
+  z-index: 500;
+  padding-top: 1.25em;
+  background-color: white;
+
+  p,
+  li {
+    color: $mid1;
+    line-height: 1.6;
+    font-size: 0.925rem;
+    @include futuraRegular;
+  }
+
+  a {
+    color: $bgreen;
+  }
+
+  nav li {
+    list-style: none;
+    margin: 0 1.5em 0 0;
+    @include futuraRegular;
+  }
+
+  img {
+    margin-top: 0.425em;
+  }
+}
+
+
+// 5.
+// Colour Palette
+.palette-block {
+  section {
+    background-color: white;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.25rem;
+    overflow: hidden;
+    @include border-radius(3px, 3px);
+    @include box-shadow($light3 0 2px 0);
+
+    div {
+      background-color: $mid1;
+      min-height: 100px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      @include transition(all, 0.4s, ease-in-out);
+
+      // copy visual effect
+      &::after {
+        content: "copy";
+        position: absolute;
+        font-size: 0.75em;
+        color: white;
+        background-color: rgba(30,30,30,0.25);
+        padding: 0.25rem 5%;
+        width: 100%;
+        left: 0;
+        bottom: -50px;
+        opacity: 0.1;
+        margin: 0;
+        @include transition(all, 0.4s, ease-in-out);
+        @include futuraRegular;
+        @include upperCase;
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+          bottom: 0;
+        }
+      }
+
+      &:active {
+        background-color: white;
+
+        &::after {
+          font-family: "FontAwesome";
+          content: "";
+          color: $green1;
+          background: $light2;
+        }
+      }
+    }
+  }
+
+  small,
+  span {
+    display: block;
+    margin: 0.5rem 0.75rem 0.5rem;
+    line-height: 1;
+    color: $mid3;
+    @include futuraRegular;
+  }
+
+  small {
+    font-size: 0.75em;
+  }
+
+  span {
+    @include upperCase;
+    font-size: 1.125em;
+    font-family: $mono;
+    font-weight: bold;
+    letter-spacing: 0;
+
+    &::before {
+      content: "#";
+    }
+  }
+
+  &.palette-green1 div {
+    background-color: $green1;
+  }
+  &.palette-green2 div {
+    background-color: $green2;
+  }
+  &.palette-green3 div {
+    background-color: $green3;
+  }
+  &.palette-green4 div {
+    background-color: $green4;
+  }
+  &.palette-yellow1 div {
+    background-color: $yellow1;
+  }
+  &.palette-yellow2 div {
+    background-color: $yellow2;
+  }
+  &.palette-yellow3 div {
+    background-color: $yellow3;
+  }
+  &.palette-red1 div {
+    background-color: $red1;
+  }
+  &.palette-red2 div {
+    background-color: $red2;
+  }
+  &.palette-red3 div {
+    background-color: $red3;
+  }
+  &.palette-blue1 div {
+    background-color: $blue1;
+  }
+  &.palette-blue2 div {
+    background-color: $blue2;
+  }
+  &.palette-blue3 div {
+    background-color: $blue3;
+  }
+  &.palette-blue4 div {
+    background-color: $blue4;
+  }
+  &.palette-light1 div {
+    background-color: $light1;
+    border: 3px dashed white;
+  }
+  &.palette-grey1 div {
+    background-color: $grey1;
+  }
+  &.palette-grey2 div {
+    background-color: $grey2;
+  }
+  &.palette-grey3 div {
+    background-color: $grey3;
+  }
+  &.palette-grey4 div {
+    background-color: $grey4;
+  }
+  &.palette-mid2 div {
+    background-color: $mid2;
+  }
+  &.palette-light2 div {
+    background-color: $light2;
+  }
+  &.palette-light3 div {
+    background-color: $light3;
+  }
+  &.palette-mid1 div {
+    background-color: $mid1;
+  }
+  &.palette-mid7 div {
+    background-color: $mid7;
+  }
+  &.palette-mid3 div {
+    background-color: $mid3;
+  }
+  &.palette-dark3 div {
+    background-color: $dark3;
+  }
+  &.palette-mid4 div {
+    background-color: $mid4;
+  }
+  &.palette-mid6 div {
+    background-color: $mid6;
+  }
+  &.palette-mid5 div {
+    background-color: $mid5;
+  }
+  &.palette-dark1 div {
+    background-color: $dark1;
+  }
+  &.palette-dark2 div {
+    background-color: $dark2;
+  }
+  &.palette-dark4 div {
+    background-color: $dark4;
+  }
+}
+
+.font-awesome-list {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .fa-hover {
+    font-size: 0.75em;
+    color: $grey3;
+    line-height: 2.5;
+    @include futuraRegular;
+    @include border-radius(3px, 3px);
+    @include transition(all, 0.3s, ease-in-out);
+
+    i {
+      font-size: 1.25em;
+      width: 1.5rem;
+      text-align: center;
+      color: $dark2;
+    }
+
+    &:hover {
+      background-color: darken($light2, 2.5%);
+      color: $bgreen;
+
+      i {
+        color: $green1;
+      }
+    }
+  }
+}
+
+.layout-panel {
+  background: white;
+  padding: 1.5em 2.5em 0.75rem;
+  margin: 2rem 0;
+  @include border-radius(3px,3px);
+  @include box-shadow($light3 0 2px 0);
+}
