@@ -1,0 +1,29 @@
+{
+  "name": "barricade-styleguide",
+  "version": "0.0.2",
+  "homepage": "https://github.com/barricadeio/styleguide",
+  "authors": [
+    "Barricade.io"
+  ],
+  "description": "Barricade styleguide and foundation framework",
+  "main": "scss/style.scss",
+  "keywords": [
+    "styleguide",
+    "foundation",
+    "font-awesome",
+    "css",
+    "scss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.3.0",
+    "foundation5-sass": "~0.0.2"
+  }
+}

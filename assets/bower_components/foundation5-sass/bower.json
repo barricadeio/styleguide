@@ -1,0 +1,16 @@
+{
+    "name": "foundation5-sass",
+    "description": "Zurb's Foundation 5 SASS files",
+    "version": "0.0.2",
+    "keywords": [
+        "zurb",
+        "foundation",
+        "sass",
+        "scss"
+    ],
+    "ignore": [
+        ".gitignore",
+        "bower.json",
+        "README.md"
+    ]
+}
