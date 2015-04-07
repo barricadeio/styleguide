@@ -10,13 +10,18 @@
   @include futuraBold;
   @include upperCase;
   @include border-radius(3px, 3px);
-  @include box-shadow(darken($color, 5%) 0 2px 0 0);
+  @include box-shadow(0, 2px, 0, 0, darken($color, 5%));
   @include transition(all, 0.3s, ease-in-out);
 
   &:hover {
-    background-color: darken($color, 5%);
+    background-color: darken($color, 3.5%);
     color: white !important;
-    @include box-shadow(darken($color, 5%) 0 2px 0 0);
+    @include box-shadow(0, 2px, 0, 0, darken($color, 7.5%));
+  }
+
+  &:active {
+    background-color: $color !important;
+    box-shadow: none !important;
   }
 }
 

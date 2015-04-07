@@ -127,9 +127,8 @@ $mono: 'Lucida Console', 'Courier New', monaco, monospace;
   border-radius: $radius1 $radius2 $radius1 $radius2;
 }
 
-@mixin box-shadow($color:rgba(30,30,30,0.25), $xlength:0, $ylength:2px, $size:0, $stroke:0) {
-  -webkit-box-shadow: $color $xlength $ylength $size $stroke;
-  -moz-box-shadow: $color $xlength $ylength $size $stroke;
-  box-shadow: $color $xlength $ylength $size $stroke;
+@mixin box-shadow($xlength:0, $ylength:2px, $size:0, $stroke:0, $color:rgba(30,30,30,.25)) {
+  -webkit-box-shadow: $xlength $ylength $size $stroke $color;
+  box-shadow: $xlength $ylength $size $stroke $color;
 }
 

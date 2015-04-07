@@ -350,7 +350,7 @@ body div.ng-scope:first-child,
     padding-bottom: 0.25rem;
     overflow: hidden;
     @include border-radius(3px, 3px);
-    @include box-shadow($light3 0 2px 0);
+    @include box-shadow(0, 2px, 0, 0, $light3);
 
     div {
       background-color: $mid1;
@@ -415,7 +415,7 @@ body div.ng-scope:first-child,
 
   span {
     @include upperCase;
-    font-size: 1.125em;
+    font-size: 1em;
     font-family: $mono;
     font-weight: bold;
     letter-spacing: 0;

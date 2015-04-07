@@ -10581,6 +10581,9 @@ p.date {
   color: #999;
   font-size: 14px;
 }
+p small {
+  font-size: 14px;
+}
 
 ol, ul {
   margin-left: 1.8rem;
@@ -10651,18 +10654,21 @@ button {
   -webkit-border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   border-radius: 3px 3px 3px 3px;
-  -webkit-box-shadow: #067c7b 0 2px 0 0 0 2px 0 0;
-  -moz-box-shadow: #067c7b 0 2px 0 0 0 2px 0 0;
-  box-shadow: #067c7b 0 2px 0 0 0 2px 0 0;
+  -webkit-box-shadow: 0 2px 0 0 #067c7b;
+  box-shadow: 0 2px 0 0 #067c7b;
   transition: all 0.3s ease-in-out;
 }
 .button:hover,
 button:hover {
-  background-color: #067c7b;
+  background-color: #068382;
   color: white !important;
-  -webkit-box-shadow: #067c7b 0 2px 0 0 0 2px 0 0;
-  -moz-box-shadow: #067c7b 0 2px 0 0 0 2px 0 0;
-  box-shadow: #067c7b 0 2px 0 0 0 2px 0 0;
+  -webkit-box-shadow: 0 2px 0 0 #056f6f;
+  box-shadow: 0 2px 0 0 #056f6f;
+}
+.button:active,
+button:active {
+  background-color: #079493 !important;
+  box-shadow: none !important;
 }
 .button.secondary,
 button.secondary {
@@ -10678,19 +10684,22 @@ button.secondary {
   -webkit-border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   border-radius: 3px 3px 3px 3px;
-  -webkit-box-shadow: #d2d2d2 0 2px 0 0 0 2px 0 0;
-  -moz-box-shadow: #d2d2d2 0 2px 0 0 0 2px 0 0;
-  box-shadow: #d2d2d2 0 2px 0 0 0 2px 0 0;
+  -webkit-box-shadow: 0 2px 0 0 #d2d2d2;
+  box-shadow: 0 2px 0 0 #d2d2d2;
   transition: all 0.3s ease-in-out;
   color: #999;
 }
 .button.secondary:hover,
 button.secondary:hover {
-  background-color: #d2d2d2;
+  background-color: #d6d6d6;
   color: white !important;
-  -webkit-box-shadow: #d2d2d2 0 2px 0 0 0 2px 0 0;
-  -moz-box-shadow: #d2d2d2 0 2px 0 0 0 2px 0 0;
-  box-shadow: #d2d2d2 0 2px 0 0 0 2px 0 0;
+  -webkit-box-shadow: 0 2px 0 0 #cccccc;
+  box-shadow: 0 2px 0 0 #cccccc;
+}
+.button.secondary:active,
+button.secondary:active {
+  background-color: #dfdfdf !important;
+  box-shadow: none !important;
 }
 .button.secondary:hover,
 button.secondary:hover {
@@ -10710,18 +10719,21 @@ button.success {
   -webkit-border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   border-radius: 3px 3px 3px 3px;
-  -webkit-box-shadow: #55aea2 0 2px 0 0 0 2px 0 0;
-  -moz-box-shadow: #55aea2 0 2px 0 0 0 2px 0 0;
-  box-shadow: #55aea2 0 2px 0 0 0 2px 0 0;
+  -webkit-box-shadow: 0 2px 0 0 #55aea2;
+  box-shadow: 0 2px 0 0 #55aea2;
   transition: all 0.3s ease-in-out;
 }
 .button.success:hover,
 button.success:hover {
-  background-color: #55aea2;
+  background-color: #5ab0a4;
   color: white !important;
-  -webkit-box-shadow: #55aea2 0 2px 0 0 0 2px 0 0;
-  -moz-box-shadow: #55aea2 0 2px 0 0 0 2px 0 0;
-  box-shadow: #55aea2 0 2px 0 0 0 2px 0 0;
+  -webkit-box-shadow: 0 2px 0 0 #4fa69a;
+  box-shadow: 0 2px 0 0 #4fa69a;
+}
+.button.success:active,
+button.success:active {
+  background-color: #66b6ab !important;
+  box-shadow: none !important;
 }
 .button.cancel,
 button.cancel {
@@ -10737,18 +10749,21 @@ button.cancel {
   -webkit-border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   border-radius: 3px 3px 3px 3px;
-  -webkit-box-shadow: #ff013e 0 2px 0 0 0 2px 0 0;
-  -moz-box-shadow: #ff013e 0 2px 0 0 0 2px 0 0;
-  box-shadow: #ff013e 0 2px 0 0 0 2px 0 0;
+  -webkit-box-shadow: 0 2px 0 0 #ff013e;
+  box-shadow: 0 2px 0 0 #ff013e;
   transition: all 0.3s ease-in-out;
 }
 .button.cancel:hover,
 button.cancel:hover {
-  background-color: #ff013e;
+  background-color: #ff0943;
   color: white !important;
-  -webkit-box-shadow: #ff013e 0 2px 0 0 0 2px 0 0;
-  -moz-box-shadow: #ff013e 0 2px 0 0 0 2px 0 0;
-  box-shadow: #ff013e 0 2px 0 0 0 2px 0 0;
+  -webkit-box-shadow: 0 2px 0 0 #f4003a;
+  box-shadow: 0 2px 0 0 #f4003a;
+}
+.button.cancel:active,
+button.cancel:active {
+  background-color: #ff1b51 !important;
+  box-shadow: none !important;
 }
 .button .round,
 button .round {
@@ -11377,9 +11392,8 @@ body div.ng-scope:first-child,
   -webkit-border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   border-radius: 3px 3px 3px 3px;
-  -webkit-box-shadow: #dfdfdf 0 2px 0 0 2px 0 0;
-  -moz-box-shadow: #dfdfdf 0 2px 0 0 2px 0 0;
-  box-shadow: #dfdfdf 0 2px 0 0 2px 0 0;
+  -webkit-box-shadow: 0 2px 0 0 #dfdfdf;
+  box-shadow: 0 2px 0 0 #dfdfdf;
 }
 .palette-block section div {
   background-color: #bbbcc7;
@@ -11441,7 +11455,7 @@ body div.ng-scope:first-child,
 .palette-block span {
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  font-size: 1.125em;
+  font-size: 1em;
   font-family: "Lucida Console", "Courier New", monaco, monospace;
   font-weight: bold;
   letter-spacing: 0;
@@ -11585,9 +11599,8 @@ body div.ng-scope:first-child,
   -webkit-border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   border-radius: 3px 3px 3px 3px;
-  -webkit-box-shadow: #dfdfdf 0 2px 0 0 2px 0 0;
-  -moz-box-shadow: #dfdfdf 0 2px 0 0 2px 0 0;
-  box-shadow: #dfdfdf 0 2px 0 0 2px 0 0;
+  -webkit-box-shadow: #dfdfdf 0 2px 0 2px 0 0 rgba(30, 30, 30, 0.25);
+  box-shadow: #dfdfdf 0 2px 0 2px 0 0 rgba(30, 30, 30, 0.25);
 }
 
 html, body {
