@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(grunt) {
 
   var appConfig = {
@@ -20,14 +22,6 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      injectJS: {
-        files: [
-          'client/**/*.js',
-          '!client/**/*.spec.js',
-          '!client/**/*.mock.js',
-          '!client/scripts/app.js'],
-        tasks: ['injector:scripts']
-      },
       injectCss: {
         files: [
           '/assets/**/*.css'
@@ -55,7 +49,6 @@ module.exports = function(grunt) {
       files: [
         'assets/css/*.css',
         'views/*.html',
-        '{assets/js, scripts}/*.js',
         'assets/img/{,*//*}*.{png,jpg,jpeg,gif,webp,svg}'
       ],
       options: {
@@ -113,48 +106,35 @@ module.exports = function(grunt) {
       }
     },
 
-    // The actual grunt server settings
-    connect: {
+    express: {
       options: {
-        port: 9090,
-        hostname: 'localhost',
-        livereload: 35729
+        port: process.env.PORT || 3000
       },
-      
-      test: {
+      dev: {
         options: {
-          port: 9001,
-          middleware: function (connect) {
-            return [
-              connect.static('.tmp'),
-              connect.static('test'),
-              connect().use(
-                '/bower_components',
-                connect.static('./bower_components')
-              ),
-              connect.static(appConfig.app)
-            ];
-          }
+          script: 'client/scripts/app.js',
+            debug: true
         }
       },
-      dist: {
+      prod: {
         options: {
-          open: true,
-          base: '.'
+          script: 'client/scripts/app.js'
         }
       }
     }
   });
 
+  grunt.registerTask('express-keepalive', 'Keep grunt running', function () {
+      this.async();
+  });
+
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
-    }
 
     grunt.task.run([
       'injector',
       'watch',
-      'connect:livereload'
+      'express:dev',
+      'express-keepalive'
     ]);
   });
 
@@ -164,7 +144,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html2js');
   grunt.loadNpmTasks('grunt-asset-injector');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-express-server');
 
   // Register the default tasks.
   grunt.registerTask('default', ['watch']);

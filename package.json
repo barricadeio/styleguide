@@ -9,6 +9,7 @@
     "grunt-contrib-connect": "^0.10.1",
     "grunt-contrib-sass": "~0.7.3",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-express-server": "^0.5.1",
     "grunt-html2js": "^0.3.1"
   },
   "engines": {
