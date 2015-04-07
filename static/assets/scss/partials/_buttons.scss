@@ -1,0 +1,63 @@
+//
+/* Buttons
+//
+*/
+
+@mixin button($color) {
+  border: none !important;
+  color: white;
+  background-color: $color;
+  @include futuraBold;
+  @include upperCase;
+  @include border-radius(3px, 3px);
+  @include box-shadow(darken($color, 5%) 0 2px 0 0);
+  @include transition(all, 0.3s, ease-in-out);
+
+  &:hover {
+    background-color: darken($color, 5%);
+    color: white !important;
+    @include box-shadow(darken($color, 5%) 0 2px 0 0);
+  }
+}
+
+.button,
+button {
+  @include button($bgreen);
+
+  &.secondary {
+    @include button($light3);
+    color: $grey2;
+
+    &:hover {
+      color: $grey3 !important;
+    }
+  }
+
+  &.success {
+    @include button($green1);
+  }
+
+  &.cancel {
+    @include button($red1);
+  }
+
+  .round {
+    @include border-radius(1.5rem, 1.5rem);
+  }
+}
+
+button.disabled,
+button[disabled],
+.button.disabled,
+.button[disabled] {
+  background-color: $light3;
+  color: $mid4;
+  opacity: 0.7;
+  cursor: text;
+
+  &:hover {
+    background-color: $light3;
+    color: $mid4 !important;
+    box-shadow: none !important;
+  }
+}

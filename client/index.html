@@ -1,0 +1,100 @@
+<!doctype html>
+  <!--[if lt IE 7]>
+  <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>
+  <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>
+  <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="/">
+  <title>Styleguide</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="icon" type="image/png" href="favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+
+  <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- endbuild -->
+
+  <script src="//use.typekit.net/rls2lvm.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body ng-app="styleguideApp">
+  <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <section role="main" class="scroll-container">
+    <div ng-view=""></div>
+  </section>
+
+  <div class="styleguide-footer">
+    <footer class="row">
+      <div class="large-8 medium-6 small-4 column">
+        <nav>
+          <ul class="inline-list">
+            <li><a href="http://blog.barricade.io" target="_blank" title="Check out our blog">Blog</a></li>
+            <li><a href="http://barricade.io/features.html" target="_blank" title="Learn about Barricade">About</a></li>
+            <li><a href="http://barricade.io/jobs.html" target="_blank" title="Come and work with us">Jobs</a></li>
+            <li><a href="http://barricade.io/about.html" target="_blank" title="Drop us a line">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="large-3 medium-4 small-4 column">
+        <p>
+          Follow <a href="https://twitter.com/barricadeio" title="Follow @barricadeio on Twitter">@barricadeio</a> on Twitter<br>
+          Like <a href="https://www.facebook.com/barricadeio" title="Like Barricade on Facebook">Barricade</a> on Facebook
+        </p>
+      </div>
+
+      <div class="large-1 medium-2 small-4 column">
+        <a href="http://barricade.io" title="Barricade - the security product modern companies have been waiting for">
+          <img src="img/footer-logo.png" class="right">
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+    (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+    r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+    }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-54353103-1');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>
