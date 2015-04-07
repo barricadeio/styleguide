@@ -254,6 +254,7 @@
           ul {
             display: block;
             padding-bottom: 1em;
+            padding-right: 0;
 
             li a {
               padding: 0.333em 0 0.333em 3em;
@@ -276,7 +277,7 @@
 
         &.heading.active {
           a {
-            border-left: 4px solid lighten($light1, 1%);
+            border-left: 4px solid $green1;
             background: white;
           }
 
