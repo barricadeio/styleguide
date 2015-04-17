@@ -3226,8 +3226,8 @@ form textarea, .form-controls textarea { min-height: 80px; }
 .styleguide ::selection, .styleguide-footer ::selection { background: #66b6ab; color: white; }
 .styleguide ::-moz-selection, .styleguide-footer ::-moz-selection { background: #66b6ab; color: white; }
 
-.styleguide .column { padding-top: 3rem; padding-bottom: 10em; }
-.styleguide .column h1.jumbotron { margin-bottom: 5.5rem; color: #7c939d; text-transform: none; letter-spacing: 0.015em; }
+.styleguide .column { padding-top: 2.333rem; padding-bottom: 10em; }
+.styleguide .column h1.jumbotron { margin-bottom: 4.5rem; color: #7c939d; text-transform: none; letter-spacing: 0.015em; }
 .styleguide .column .btn-row { background-color: transparent; border-top: 2px solid #ecedf3; margin: 2.5rem 0; padding: 1rem 0; }
 .styleguide .column .btn-row button { width: auto; }
 
@@ -3287,7 +3287,7 @@ body div.ng-scope:first-child, .full-width { height: 100%; min-height: 100%; }
 .styleguide-footer img { margin-top: 0.425em; }
 
 .palette-block section { background-color: white; margin-bottom: 1.5rem; padding-bottom: 0.25rem; overflow: hidden; -webkit-border-radius: 3px 3px 3px 3px; -moz-border-radius: 3px 3px 3px 3px; border-radius: 3px 3px 3px 3px; -webkit-box-shadow: 0 2px 0 #dfdfdf; -moz-box-shadow: 0 2px 0 #dfdfdf; box-shadow: 0 2px 0 #dfdfdf; }
-.palette-block section div.palette-button { min-height: 100px; text-align: center; position: relative; cursor: pointer; overflow: hidden; transition: all 0.4s ease-in-out; }
+.palette-block section div.palette-button { border-radius: 3px 3px 0 0; min-height: 100px; text-align: center; position: relative; cursor: pointer; overflow: hidden; transition: all 0.4s ease-in-out; }
 .palette-block section div.palette-button::after { content: "copy"; position: absolute; font-size: 0.75em; color: white; background-color: rgba(30, 30, 30, 0.25); padding: 0.25rem 5%; width: 100%; left: 0; bottom: -50px; opacity: 0.1; margin: 0; transition: all 0.4s ease-in-out; font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0.0075em; -webkit-font-smoothing: antialiased; text-transform: uppercase; letter-spacing: 0.25em; }
 .palette-block.zeroclipboard-is-hover, .palette-block:hover { cursor: pointer; }
 .palette-block.zeroclipboard-is-hover .palette-button:after, .palette-block:hover .palette-button:after { opacity: 1; bottom: 0; }
@@ -3337,7 +3337,5 @@ body div.ng-scope:first-child, .full-width { height: 100%; min-height: 100%; }
 .font-awesome-list .fa-hover:hover i { color: #66b6ab; }
 
 .layout-panel { background: white; padding: 1.5em 2.5em 0.75rem; margin: 2em 0; -webkit-border-radius: 3px 3px 3px 3px; -moz-border-radius: 3px 3px 3px 3px; border-radius: 3px 3px 3px 3px; -webkit-box-shadow: #dfdfdf 0 2px 0 2px 0 rgba(30, 30, 30, 0.25); -moz-box-shadow: #dfdfdf 0 2px 0 2px 0 rgba(30, 30, 30, 0.25); box-shadow: #dfdfdf 0 2px 0 2px 0 rgba(30, 30, 30, 0.25); }
-
-@media screen and (min-width: 40rem) and (max-width: 60rem) { body .styleguide { background-color: red; } }
 
 /*# sourceMappingURL=styleguide.css.map */
