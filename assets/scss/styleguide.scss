@@ -1,11 +1,160 @@
 /* Styleguide Doc Pages */
 //
+// 0. Load Style Guide
 // 1. Base Layout
 // 2. Animations
 // 3. Sidebar Menu
 // 4. Sticky Footer
 // 5. Colour Palette
 //
+
+// import the style guide bower_component
+/* ==========================================================================
+/ Barricade Styleguide
+/ https://github.com/barricadeio/barricade-styleguide
+/ ---------------------------------------------------
+/ - normalize
+/ - foundation 5
+/ - font awesome
+/ - brand styleguide
+/ - (+) local app edits
+/ ---------------------------------------------------
+/
+**/
+
+// load reset (normalize)
+@import "../../bower_components/foundation/scss/normalize.scss";
+
+// load foundation
+@import "../../bower_components/foundation/scss/foundation/components/grid";
+@import "../../bower_components/foundation/scss/foundation/components/accordion";
+@import "../../bower_components/foundation/scss/foundation/components/alert-boxes";
+@import "../../bower_components/foundation/scss/foundation/components/block-grid";
+@import "../../bower_components/foundation/scss/foundation/components/breadcrumbs";
+@import "../../bower_components/foundation/scss/foundation/components/button-groups";
+@import "../../bower_components/foundation/scss/foundation/components/buttons";
+@import "../../bower_components/foundation/scss/foundation/components/clearing";
+@import "../../bower_components/foundation/scss/foundation/components/dropdown";
+@import "../../bower_components/foundation/scss/foundation/components/dropdown-buttons";
+@import "../../bower_components/foundation/scss/foundation/components/flex-video";
+@import "../../bower_components/foundation/scss/foundation/components/forms";
+@import "../../bower_components/foundation/scss/foundation/components/icon-bar";
+@import "../../bower_components/foundation/scss/foundation/components/inline-lists";
+@import "../../bower_components/foundation/scss/foundation/components/joyride";
+@import "../../bower_components/foundation/scss/foundation/components/keystrokes";
+@import "../../bower_components/foundation/scss/foundation/components/labels";
+@import "../../bower_components/foundation/scss/foundation/components/magellan";
+@import "../../bower_components/foundation/scss/foundation/components/orbit";
+@import "../../bower_components/foundation/scss/foundation/components/pagination";
+@import "../../bower_components/foundation/scss/foundation/components/panels";
+@import "../../bower_components/foundation/scss/foundation/components/pricing-tables";
+@import "../../bower_components/foundation/scss/foundation/components/progress-bars";
+@import "../../bower_components/foundation/scss/foundation/components/range-slider";
+@import "../../bower_components/foundation/scss/foundation/components/reveal";
+@import "../../bower_components/foundation/scss/foundation/components/side-nav";
+@import "../../bower_components/foundation/scss/foundation/components/split-buttons";
+@import "../../bower_components/foundation/scss/foundation/components/sub-nav";
+@import "../../bower_components/foundation/scss/foundation/components/switches";
+@import "../../bower_components/foundation/scss/foundation/components/tables";
+@import "../../bower_components/foundation/scss/foundation/components/tabs";
+@import "../../bower_components/foundation/scss/foundation/components/thumbs";
+@import "../../bower_components/foundation/scss/foundation/components/tooltips";
+@import "../../bower_components/foundation/scss/foundation/components/top-bar";
+@import "../../bower_components/foundation/scss/foundation/components/type";
+@import "../../bower_components/foundation/scss/foundation/components/offcanvas";
+@import "../../bower_components/foundation/scss/foundation/components/visibility";
+
+// load font awesome
+$fa-font-path: "../bower_components/font-awesome/fonts" !default;
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+// load styleguide
+@import "../../bower_components/barricade-styleguide/scss/partials/variables";
+@import "../../bower_components/barricade-styleguide/scss/partials/typography";
+@import "../../bower_components/barricade-styleguide/scss/partials/buttons";
+@import "../../bower_components/barricade-styleguide/scss/partials/icons";
+@import "../../bower_components/barricade-styleguide/scss/partials/keyframe";
+@import "../../bower_components/barricade-styleguide/scss/partials/toolkit";
+
+
+html, body {
+  font-size: $base-font-size;
+  background: $light1;
+  @include futuraRegular;
+}
+
+form,
+.form-controls {
+
+  .form-control {
+    margin-bottom: 1.25rem;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="color"],
+  textarea,
+  select {
+    @include futuraRegular;
+    @include normCase;
+    letter-spacing: 0.075em;
+
+    // user input color
+    color: $mid5;
+
+    // placeholder input color
+    &::-webkit-input-placeholder {
+       color: $mid4;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: $mid4;
+    }
+    &:-ms-input-placeholder {
+       color: $mid4;
+    }
+
+    // placeholder active color
+    &:active,
+    &:focus {
+      color: $dark1;
+
+      &::-webkit-input-placeholder {
+         color: $light1;
+      }
+      &::-moz-placeholder {  /* Firefox 19+ */
+         color: $light1;
+      }
+      &:-ms-input-placeholder {
+         color: $light1;
+      }
+    }
+  }
+
+  label {
+    @include futuraRegular;
+    line-height: 2;
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+}
+
+.alert-box {
+  font-size: $scalex3;
+  padding-right: 5%;
+}
 
 
 // 1.
@@ -193,7 +342,7 @@
           @include futuraRegular;
           border-bottom: none;
           color: $dark1;
-          padding: 0.75em 2.5em;
+          padding: 0.25em 2.5em;
           background-color: transparent;
 
           &:hover {
@@ -207,7 +356,7 @@
         }
 
         &.heading {
-          font-size: 1.25em;
+          font-size: $scalex4;
           text-transform: none;
 
           a {
@@ -257,14 +406,16 @@
             padding-right: 0;
 
             li a {
-              padding: 0.333em 0 0.333em 3em;
+              padding: 0.2em 0 0.2em 1.825em;
               color: $mid4;
+              font-size: $scalex3;
             }
           }
         }
       }
     }
 
+    /*
     @media (min-width: 1400px) {
       position: relative;
       left: auto;
@@ -294,6 +445,7 @@
         }
       }
     }
+    */
   }
 }
 
@@ -314,7 +466,7 @@ body div.ng-scope:first-child,
   height: 6em;
   position: relative;
   z-index: 500;
-  padding-top: 1.25em;
+  padding: 1.25em 1.125rem 0;
   background-color: white;
 
   p,
@@ -350,19 +502,19 @@ body div.ng-scope:first-child,
     padding-bottom: 0.25rem;
     overflow: hidden;
     @include border-radius(3px, 3px);
-    @include box-shadow(0, 2px, 0, 0, $light3);
+    @include box-shadow(0, 2px, 0, $light3);
 
-    div {
-      background-color: $mid1;
+    div.palette-button {
+      //background-color: $mid1;
       min-height: 100px;
       text-align: center;
       position: relative;
-      //cursor: pointer;
+      cursor: pointer;
       overflow: hidden;
       @include transition(all, 0.4s, ease-in-out);
 
       // copy visual effect
-      /*&::after {
+      &::after {
         content: "copy";
         position: absolute;
         font-size: 0.75em;
@@ -378,44 +530,49 @@ body div.ng-scope:first-child,
         @include futuraRegular;
         @include upperCase;
       }
+    }
+  }
 
-      &:hover {
-        &:after {
-          opacity: 1;
-          bottom: 0;
-        }
+  &.zeroclipboard-is-hover,
+  &:hover {
+    cursor: pointer;
+
+    .palette-button:after {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+
+  &.zeroclipboard-is-active,
+  &:active {
+    .palette-button {
+      background-color: white !important;
+
+      &::after {
+        font-family: "FontAwesome";
+        content: "";
+        color: $green1;
+        background: $light2;
       }
-
-      &:active {
-        background-color: white;
-
-        &::after {
-          font-family: "FontAwesome";
-          content: "";
-          color: $green1;
-          background: $light2;
-        }
-      }
-      */
     }
   }
 
   small,
   span {
     display: block;
-    margin: 0.5rem 0.75rem 0.5rem;
+    margin: 0.333rem 0.5rem 0.25rem;
     line-height: 1;
-    color: $mid3;
+    color: $grey2;
     @include futuraRegular;
   }
 
   small {
-    font-size: 0.75em;
+    font-size: $scalex0;
   }
 
   span {
     @include upperCase;
-    font-size: 1em;
+    font-size: $scalex2;
     font-family: $mono;
     font-weight: bold;
     letter-spacing: 0;
@@ -557,7 +714,13 @@ body div.ng-scope:first-child,
 .layout-panel {
   background: white;
   padding: 1.5em 2.5em 0.75rem;
-  margin: 2rem 0;
+  margin: 2em 0;
   @include border-radius(3px,3px);
   @include box-shadow($light3 0 2px 0);
+}
+
+@media screen and (min-width: 40rem) and (max-width: 60rem) {
+  body .styleguide {
+    background-color: red;
+  }
 }
