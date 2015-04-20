@@ -3034,6 +3034,7 @@ p { line-height: 2.15; color: #4c4f4f; }
 p.chart_num { font-family: "futura-pt", "futura-light", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; letter-spacing: 0.015em; -webkit-font-smoothing: antialiased; font-style: italic; color: #999; font-size: 53.94016px; }
 p.chart_name { font-family: "futura-pt", "futura-bold", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 0.035em; -webkit-font-smoothing: antialiased; text-transform: uppercase; letter-spacing: 0.25em; font-size: 15.9992px; }
 p.date { font-family: "futura-pt", "futura-light", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; letter-spacing: 0.015em; -webkit-font-smoothing: antialiased; font-style: italic; color: #999; font-size: 15.9992px; }
+p small, p.small { font-size: 14.8564px; }
 
 ol, ul { margin-left: 1.8rem; margin-bottom: 2.5rem; }
 ol li, ul li { margin-bottom: 0.5em; }

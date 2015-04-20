@@ -34,7 +34,33 @@
   <section role="main" class="scroll-container">
     <div class="row full-width styleguide">
 
+      <div class="off-canvas-wrap">
+        <div class="inner-wrap">
+          <nav class="tab-bar">
+
+            <!--
+            <a href="mobileMenu" role="button" class="left-off-canvas-toggle"><i class="fa fa-fw"></i></a>
+            -->
+
+            <section class="left-small">
+              <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+            </section>
+
+            <aside class="left-off-canvas-menu">
+              <ul class="off-canvas-list">
+                <li class=""><a href="index.html">Intro</a></li>
+                <li class=""><a href="styles.html">Styles</a></li>
+                <li class=""><a href="assets.html">Assets</a></li>
+                <li class=""><a href="voice.html">Voice &amp; Tone</a></li>
+              </ul>
+            </aside>
+
+          </nav>
+        </div>
+      </div>
+
       <div class="large-2 medium-2 columns">
+
         <div class="hide-for-small">
           <div class="sidebar">
 
@@ -368,10 +394,10 @@
                   <small class="regular-text">Weight 300, letter-spacing 0.07ems</small>
 
                   <h2 class="regular-text" style="margin-bottom:-0.25rem;">Futura PT Regular</h2>
-                  <small class="regular-text">Weight 400, letter-spacing 0.035ems</small>
+                  <small class="regular-text">Weight 400, letter-spacing 0.0075ems</small>
 
                   <h2 class="bold-text" style="margin-bottom:-0.25rem;">Futura PT Bold</h2>
-                  <small class="regular-text">Weight 700, letter-spacing 0.05ems</small>
+                  <small class="regular-text">Weight 700, letter-spacing 0.035ems</small>
                   <br>
                 </div>
 
@@ -786,6 +812,8 @@
     ga('create', 'UA-54353103-1');
   ga('send', 'pageview');
 </script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
 
 <!-- zeroclipboard -->
 <script src="bower_components/zeroclipboard/dist/ZeroClipboard.min.js"></script>
