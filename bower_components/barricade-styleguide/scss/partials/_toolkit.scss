@@ -1,0 +1,50 @@
+// Tabs
+.tabs {
+  margin-bottom: 0 !important;
+  margin: 0px auto;
+  width: 40%;
+
+  dd,
+  .tab-title {
+    float: left;
+    width: 50%;
+    text-align: center;
+
+    a {
+      @include futuraRegular;
+      color: $green3;
+      padding: 1rem 0;
+      font-size: 1rem;
+      border: 1px solid $green3;
+
+      &:hover {
+        background-color: $light2;
+      }
+    }
+
+    &.active a {
+      background-color: $green3;
+      color: white;
+    }
+  }
+}
+
+// Tooltip
+.tooltip {
+  font-size: $scalex4 !important;
+}
+
+
+@media only screen and (max-width: 40em) {
+
+}
+
+.tooltip > .nub {
+  @include futuraRegular;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .joyride-tip-guide {
+    width: 95%;
+  }
+}

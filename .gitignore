@@ -4,8 +4,6 @@
 .idea
 /server/config/local.env.js
 /dist
-/node_modules
-/bower_components
 
 # Ignore native extensions in the node_modules folder (things changed by npm rebuild)
 node_modules/**/*.node

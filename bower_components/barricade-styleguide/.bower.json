@@ -1,0 +1,38 @@
+{
+  "name": "barricade-styleguide",
+  "homepage": "https://github.com/barricadeio/barricade-styleguide",
+  "authors": [
+    "Barricade.io"
+  ],
+  "description": "Barricade styleguide and foundation framework",
+  "main": "scss/style.scss",
+  "keywords": [
+    "styleguide",
+    "foundation",
+    "font-awesome",
+    "css",
+    "scss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.3.0",
+    "foundation": "zurb/bower-foundation#~5.5.1"
+  },
+  "_release": "fc2c26b6a5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "fc2c26b6a5b69a5c18b7cb201a80b96b1118b95b"
+  },
+  "_source": "git://github.com/barricadeio/barricade-styleguide.git",
+  "_target": "*",
+  "_originalSource": "barricade-styleguide",
+  "_direct": true
+}
