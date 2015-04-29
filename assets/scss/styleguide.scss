@@ -6,6 +6,7 @@
 // 3. Sidebar Menu
 // 4. Sticky Footer
 // 5. Colour Palette
+// 6. Media Queries
 //
 
 // import the style guide bower_component
@@ -414,38 +415,6 @@ form,
         }
       }
     }
-
-    /*
-    @media (min-width: 1400px) {
-      position: relative;
-      left: auto;
-      margin-left: -60px;
-      border: none;
-      background-color: transparent;
-
-      ul.side-nav li {
-        border: none !important;
-
-        &.heading.active {
-          a {
-            border-left: 4px solid $green1;
-            background: white;
-          }
-
-          li {
-            a {
-              background: white;
-              padding-left: 2.5em;
-            }
-
-            &:last-child a {
-              padding-bottom: 1em;
-            }
-          }
-        }
-      }
-    }
-    */
   }
 }
 
@@ -466,14 +435,14 @@ body div.ng-scope:first-child,
   height: 6em;
   position: relative;
   z-index: 500;
-  padding: 1.25em 1.125rem 0;
+  padding-top: 1.25em;
   background-color: white;
 
   p,
   li {
     color: $mid1;
     line-height: 1.6;
-    font-size: 0.925rem;
+    font-size: $scalex3;
     @include futuraRegular;
   }
 
@@ -719,8 +688,155 @@ body div.ng-scope:first-child,
   @include box-shadow($light3 0 2px 0);
 }
 
-@media screen and (min-width: 40rem) and (max-width: 60rem) {
+
+// 6.
+// Media Queries
+//
+
+// medium and smaller
+//
+@media screen and (max-width: 60rem) {
   body .styleguide {
-    //background-color: red;
+
+    .sidebar-wrap {
+      //make the sidebar 100% flush with page edges
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .sidebar {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border: none;
+
+      h1 {
+        background-size: cover;
+
+        img {
+          margin: 0.75em auto;
+          max-height: 55px;
+          width: auto;
+        }
+      }
+
+      ul.side-nav {
+
+        li,
+        li.heading {
+          float: left;
+          width: 25%;
+          border: none;
+          background: white;
+
+          a {
+            line-height: 3;
+            text-align: center;
+            border: none;
+            padding: 0.5em 0;
+          }
+
+          &.active {
+            background: $light2;
+
+            a {
+              @include futuraBold;
+            }
+
+            ul {
+              display: none;
+            }
+          }
+        }
+
+        li.heading:first-child {
+          padding-top: 0;
+        }
+      }
+    }
+
+    .column {
+      h1.jumbotron {
+        font-size: $scalex8;
+        margin: 0 0 1.125em;
+      }
+
+      .btn-row .button {
+        max-width: 47.5%;
+      }
+    }
+
+    .palette-block {
+      width: 100%;
+      display: block;
+      float: none;
+      clear: both;
+
+      &.zeroclipboard-is-hover,
+      &:hover {
+        section {
+          background: lighten($light1, 2.5%);
+        }
+
+        span, small {
+          color: $dark2;
+        }
+      }
+
+      section {
+        @include border-radius(0,0);
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid $light2;
+
+        div.palette-button {
+          @include border-radius(0,0);
+          min-height: 70px;
+          width: 70px;
+          float: left;
+          margin: 0 0.825em 0 0;
+          display: inline-block;
+        }
+
+        span {
+          font-size: $scalex6;
+        }
+
+        small {
+          font-size: $scalex3;
+          margin: 0.667rem 0 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+// small
+//
+@media screen and (max-width: 40rem) {
+  body .styleguide {
+    .sidebar ul.side-nav {
+      li,
+      li.heading {
+        width: 50%;
+        float: left;
+        margin: 0;
+        overflow: hidden;
+
+        &:nth-child(3) {
+          clear: left;
+        }
+      }
+    }
+
+    .column .btn-row {
+      padding-bottom: 2.5em;
+      .button {
+        font-size: 0.667em !important;
+        float: none;
+        min-width: 100%;
+        max-width: auto;
+      }
+    }
   }
 }
