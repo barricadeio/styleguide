@@ -66,7 +66,7 @@
 @import "../../bower_components/foundation/scss/foundation/components/visibility";
 
 // load font awesome
-$fa-font-path: "../bower_components/font-awesome/fonts" !default;
+$fa-font-path: "../../bower_components/font-awesome/fonts" !default;
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 
 // load styleguide
