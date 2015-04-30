@@ -26,7 +26,6 @@
 // load reset (normalize)
 @import "../../bower_components/foundation/scss/normalize.scss";
 
-// load foundation
 @import "../../bower_components/foundation/scss/foundation/components/grid";
 @import "../../bower_components/foundation/scss/foundation/components/accordion";
 @import "../../bower_components/foundation/scss/foundation/components/alert-boxes";
@@ -202,7 +201,6 @@ form,
   .column {
     // top and bottom of page
     padding-top: 2.333rem;
-    padding-bottom: 10em; //offset against height of sticky footer
 
     h1.jumbotron {
       margin-bottom: 4.5rem;
@@ -427,7 +425,9 @@ body div.ng-scope:first-child,
 }
 
 .scroll-container {
+  height: auto;
   min-height: 100%;
+  padding-bottom: 10em;
 }
 
 .styleguide-footer {
@@ -815,6 +815,10 @@ body div.ng-scope:first-child,
 //
 @media screen and (max-width: 40rem) {
   body .styleguide {
+    .scroll-container {
+      padding-bottom: 0em;
+    }
+
     .sidebar ul.side-nav {
       li,
       li.heading {
