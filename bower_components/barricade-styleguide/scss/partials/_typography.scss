@@ -176,11 +176,6 @@ p {
     color: $grey2;
     font-size: $scalex3;
   }
-
-  small,
-  &.small {
-    font-size: $scalex2;
-  }
 }
 
 ol, ul {
@@ -226,14 +221,11 @@ strong,
   @include futuraBold;
 }
 
-.prefix, .postfix,
-span.prefix, span.postfix, {
+.prefix, .postfix {
   @include futuraBold;
-  border-radius: 0 3px 3px 0;
+  @include border-radius;
   @include upperCase;
-  font-size: $scalex1;
-  color: $mid6;
-  letter-spacing: 0.015em;
-  min-height: 1.5rem;
-  line-height: 3;
+  font-size: $scalex3;
+  height: 3.3125rem;
+  line-height: 3.3125rem;
 }

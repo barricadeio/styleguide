@@ -40,6 +40,8 @@ $lightbg: #fdfdfd;
 $light1: #f4f5f8;
 $light2: #ecedf3;
 $light3: #dfdfdf;
+$light4: #fafcfc;
+$light5: #eff4f8;
 
 $mid1: #bbbcc7;
 $mid2: #4c4f4f;
@@ -132,5 +134,35 @@ $mono: "Lucida Console", "Courier New", monaco, monospace;
   -webkit-box-shadow: $xlength $ylength $size $color;
   -moz-box-shadow: $xlength $ylength $size $color;
   box-shadow: $xlength $ylength $size $color;
+}
+
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes $animation_name {
+    @content;
+  }
+  @-moz-keyframes $animation_name {
+    @content;
+  }
+  @-o-keyframes $animation_name {
+    @content;
+  }
+  @keyframes $animation_name {
+    @content;
+  }
+}
+
+@mixin animation ($delay, $duration, $animation) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards;
 }
 

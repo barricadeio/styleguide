@@ -1,6 +1,6 @@
 {
   "name": "barricade-styleguide",
-  "version": "0.1.5",
+  "version": "0.2.2",
   "homepage": "https://github.com/barricadeio/barricade-styleguide",
   "authors": [
     "Barricade.io"
@@ -23,7 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "~4.3.0",
+    "font-awesome": "~4.1.0",
     "foundation": "zurb/bower-foundation#~5.5.1"
   }
 }
