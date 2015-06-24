@@ -529,14 +529,20 @@ body div.ng-scope:first-child,
   small,
   span {
     display: block;
-    margin: 0.333rem 0.5rem 0.25rem;
-    line-height: 1;
+    margin: 0.5rem 0.5rem 0.25rem;
+    line-height: 0.8;
     color: $grey2;
     @include futuraRegular;
   }
 
   small {
     font-size: $scalex0;
+
+    &:nth-child(3) {
+      margin: 0 0.5rem;
+      color: $mid4;
+      font-family: $mono;
+    }
   }
 
   span {
