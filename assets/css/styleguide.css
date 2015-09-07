@@ -9395,16 +9395,17 @@ body div.ng-scope:first-child,
 
 .styleguide-footer {
   margin-top: -6em;
-  height: 6em;
+  min-height: 6em;
   position: relative;
   z-index: 500;
-  padding-top: 1.25em;
+  padding-top: 0.75em;
   background-color: white; }
   .styleguide-footer p,
   .styleguide-footer li {
     color: #bbbcc7;
     line-height: 1.6;
-    font-size: 15.9992px;
+    font-size: 17.142px;
+    margin-bottom: 42px;
     font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 0.0075em;
@@ -9418,8 +9419,30 @@ body div.ng-scope:first-child,
     font-weight: 400;
     letter-spacing: 0.0075em;
     -webkit-font-smoothing: antialiased; }
+    .styleguide-footer nav li.rss a {
+      padding: 0.333em 0;
+      color: #a3beca; }
   .styleguide-footer img {
     margin-top: 0.425em; }
+  .styleguide-footer .footer-sub {
+    background-color: #fdfdfd;
+    padding-top: 0.5rem;
+    padding-bottom: 0.335rem;
+    text-align: left; }
+    .styleguide-footer .footer-sub .large-centered {
+      max-width: 100%; }
+    .styleguide-footer .footer-sub ul,
+    .styleguide-footer .footer-sub p {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .styleguide-footer .footer-sub p,
+    .styleguide-footer .footer-sub p a,
+    .styleguide-footer .footer-sub li,
+    .styleguide-footer .footer-sub li a {
+      font-size: 12px;
+      color: #95a5a6; }
+    .styleguide-footer .footer-sub a:hover {
+      color: #06807f; }
 
 .palette-block section {
   background-color: white;
@@ -9482,16 +9505,18 @@ body div.ng-scope:first-child,
   letter-spacing: 0.0075em;
   -webkit-font-smoothing: antialiased; }
 .palette-block small {
-  font-size: 11.428px; }
+  font-size: 13.7136px; }
   .palette-block small:nth-child(3) {
-    margin: 0 0.5rem;
-    color: #95a5a6;
-    font-family: "Lucida Console", "Courier New", monaco, monospace; }
+    color: #bbbcc7;
+    letter-spacing: 0.05em;
+    font-size: 10px;
+    line-height: 0.67;
+    margin: 0 0.5rem; }
 .palette-block span {
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  font-size: 14.8564px;
-  font-family: "Lucida Console", "Courier New", monaco, monospace;
+  font-size: 13.7136px;
+  display: inline-block;
   font-weight: bold;
   letter-spacing: 0; }
   .palette-block span::before {
@@ -9671,10 +9696,10 @@ body div.ng-scope:first-child,
         margin: 0 0.825em 0 0;
         display: inline-block; }
       body .styleguide .palette-block section span {
-        font-size: 22.856px; }
-      body .styleguide .palette-block section small {
         font-size: 15.9992px;
-        margin: 0.667rem 0 0.25rem; } }
+        margin: 0; }
+      body .styleguide .palette-block section small {
+        margin: 0.5rem 0 0; } }
 @media screen and (max-width: 40rem) {
   body .styleguide .scroll-container {
     padding-bottom: 0em; }

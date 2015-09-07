@@ -432,17 +432,18 @@ body div.ng-scope:first-child,
 
 .styleguide-footer {
   margin-top: -6em;
-  height: 6em;
+  min-height: 6em;
   position: relative;
   z-index: 500;
-  padding-top: 1.25em;
+  padding-top: 0.75em;
   background-color: white;
 
   p,
   li {
     color: $mid1;
     line-height: 1.6;
-    font-size: $scalex3;
+    font-size: $scalex4;
+    margin-bottom: 42px;
     @include futuraRegular;
   }
 
@@ -454,10 +455,44 @@ body div.ng-scope:first-child,
     list-style: none;
     margin: 0 1.5em 0 0;
     @include futuraRegular;
+
+    &.rss a {
+      padding: 0.333em 0;
+      color: $blue3;
+    }
   }
 
   img {
     margin-top: 0.425em;
+  }
+
+  .footer-sub {
+    background-color: $lightbg;
+    padding-top: 0.5rem;
+    padding-bottom: 0.335rem;
+    text-align: left;
+
+    .large-centered {
+      max-width: 100%;
+    }
+
+    ul,
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p,
+    p a,
+    li,
+    li a {
+      font-size: 12px;
+      color: $mid4;
+    }
+
+    a:hover {
+      color: $green4;
+    }
   }
 }
 
@@ -536,19 +571,21 @@ body div.ng-scope:first-child,
   }
 
   small {
-    font-size: $scalex0;
+    font-size: $scalex1;
 
     &:nth-child(3) {
+      color: $mid1;
+      letter-spacing: 0.05em;
+      font-size: 10px;
+      line-height: 0.67;
       margin: 0 0.5rem;
-      color: $mid4;
-      font-family: $mono;
     }
   }
 
   span {
     @include upperCase;
-    font-size: $scalex2;
-    font-family: $mono;
+    font-size: $scalex1;
+    display: inline-block;
     font-weight: bold;
     letter-spacing: 0;
 
@@ -805,12 +842,12 @@ body div.ng-scope:first-child,
         }
 
         span {
-          font-size: $scalex6;
+          font-size: $scalex3;
+          margin: 0;
         }
 
         small {
-          font-size: $scalex3;
-          margin: 0.667rem 0 0.25rem;
+          margin: 0.5rem 0 0;
         }
       }
     }
