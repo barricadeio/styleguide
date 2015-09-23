@@ -9394,55 +9394,39 @@ body div.ng-scope:first-child,
   padding-bottom: 10em; }
 
 .styleguide-footer {
-  margin-top: -6em;
-  min-height: 6em;
+  min-height: 4.25rem;
   position: relative;
   z-index: 500;
-  padding-top: 0.75em;
-  background-color: white; }
-  .styleguide-footer p,
-  .styleguide-footer li {
-    color: #bbbcc7;
-    line-height: 1.6;
-    font-size: 17.142px;
-    margin-bottom: 42px;
-    font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.0075em;
-    -webkit-font-smoothing: antialiased; }
-  .styleguide-footer a {
-    color: #079493; }
-  .styleguide-footer nav li {
-    list-style: none;
-    margin: 0 1.5em 0 0;
-    font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.0075em;
-    -webkit-font-smoothing: antialiased; }
-    .styleguide-footer nav li.rss a {
-      padding: 0.333em 0;
-      color: #a3beca; }
-  .styleguide-footer img {
-    margin-top: 0.425em; }
-  .styleguide-footer .footer-sub {
-    background-color: #fdfdfd;
-    padding-top: 0.5rem;
-    padding-bottom: 0.335rem;
-    text-align: left; }
-    .styleguide-footer .footer-sub .large-centered {
-      max-width: 100%; }
-    .styleguide-footer .footer-sub ul,
-    .styleguide-footer .footer-sub p {
-      margin-top: 0;
-      margin-bottom: 0; }
-    .styleguide-footer .footer-sub p,
-    .styleguide-footer .footer-sub p a,
-    .styleguide-footer .footer-sub li,
-    .styleguide-footer .footer-sub li a {
-      font-size: 12px;
-      color: #95a5a6; }
-    .styleguide-footer .footer-sub a:hover {
-      color: #06807f; }
+  padding-top: 1.25em;
+  background-color: #323f4c;
+  border-bottom: 6px solid #203539; }
+  .styleguide-footer a:hover {
+    border: none;
+    opacity: 1; }
+  .styleguide-footer .logo {
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out; }
+  .styleguide-footer .sub-nav-social {
+    text-align: right;
+    margin: 0; }
+    .styleguide-footer .sub-nav-social li {
+      display: inline-block;
+      margin: 0.125em 0.25em; }
+      .styleguide-footer .sub-nav-social li a {
+        font-size: 0.925em;
+        color: #bbbcc7;
+        min-width: 2em;
+        text-align: center;
+        padding: 0.425em 0.5em;
+        background: #273f45;
+        border: none;
+        -webkit-border-radius: 50% 50% 50% 50%;
+        -moz-border-radius: 50% 50% 50% 50%;
+        border-radius: 50% 50% 50% 50%;
+        transition: all 0.3s ease-in-out; }
+        .styleguide-footer .sub-nav-social li a:hover {
+          background: #06807f;
+          color: white; }
 
 .palette-block section {
   background-color: white;
