@@ -8,8 +8,7 @@
   color: white;
   background-color: $color;
   font-size: $scalex2;
-  @include futuraBold;
-  @include upperCase;
+  @include futuraRegular;
   @include border-radius(3px, 3px);
   @include box-shadow(0, 2px, 0, darken($color, 5%));
   @include transition(all, 0.3s, ease-in-out);
@@ -29,6 +28,8 @@
 .button,
 button {
   @include button($bgreen);
+  padding-top: 0.7rem;
+  padding-bottom: 0.9rem;
 
   &.secondary {
     @include button($light3);

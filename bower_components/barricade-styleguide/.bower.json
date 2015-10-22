@@ -25,11 +25,11 @@
     "font-awesome": "~4.1.0",
     "foundation": "zurb/bower-foundation#~5.5.1"
   },
-  "_release": "9d3cad13c2",
+  "_release": "c21ead0731",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "9d3cad13c233046ce60640f569aba633d7accaae"
+    "commit": "c21ead07311256d0d09ec9855f2d5a9f2a179770"
   },
   "_source": "git://github.com/barricadeio/barricade-styleguide.git",
   "_target": "*",

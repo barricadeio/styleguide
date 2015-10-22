@@ -236,19 +236,19 @@ button {
   color: white;
   background-color: #079493;
   font-size: 14.8564px;
-  font-family: "futura-pt", "futura-bold", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.035em;
+  font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.0075em;
   -webkit-font-smoothing: antialiased;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
   -webkit-border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   border-radius: 3px 3px 3px 3px;
   -webkit-box-shadow: 0 2px 0 #067c7b;
   -moz-box-shadow: 0 2px 0 #067c7b;
   box-shadow: 0 2px 0 #067c7b;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  padding-top: 0.7rem;
+  padding-bottom: 0.9rem; }
   .button:hover,
   button:hover {
     background-color: #067c7b;
@@ -266,12 +266,10 @@ button {
     color: white;
     background-color: #dfdfdf;
     font-size: 14.8564px;
-    font-family: "futura-pt", "futura-bold", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.035em;
+    font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.0075em;
     -webkit-font-smoothing: antialiased;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
     -webkit-border-radius: 3px 3px 3px 3px;
     -moz-border-radius: 3px 3px 3px 3px;
     border-radius: 3px 3px 3px 3px;
@@ -300,12 +298,10 @@ button {
     color: white;
     background-color: #66b6ab;
     font-size: 14.8564px;
-    font-family: "futura-pt", "futura-bold", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.035em;
+    font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.0075em;
     -webkit-font-smoothing: antialiased;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
     -webkit-border-radius: 3px 3px 3px 3px;
     -moz-border-radius: 3px 3px 3px 3px;
     border-radius: 3px 3px 3px 3px;
@@ -330,12 +326,10 @@ button {
     color: white;
     background-color: #ff1b51;
     font-size: 14.8564px;
-    font-family: "futura-pt", "futura-bold", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.035em;
+    font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.0075em;
     -webkit-font-smoothing: antialiased;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
     -webkit-border-radius: 3px 3px 3px 3px;
     -moz-border-radius: 3px 3px 3px 3px;
     border-radius: 3px 3px 3px 3px;
@@ -391,180 +385,6 @@ button[disabled],
     color: #95a5a6 !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
-
-@font-face {
-  font-family: 'icomoon';
-  src: url("../assets/fonts/icomoon.eot?k4uubo");
-  src: url("../assets/fonts/icomoon.eot?#iefixk4uubo") format("embedded-opentype"), url("../assets/fonts/icomoon.woff?k4uubo") format("woff"), url("../assets/fonts/icomoon.ttf?k4uubo") format("truetype"), url("../assets/fonts/icomoon.svg?k4uubo#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'futuralt';
-  src: url("../assets/fonts/futuralt-webfont.woff2"), url("../assets/fonts/futuralt-webfont.woff2?k4uubo") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'futuralt';
-  src: url("../assets/fonts/futuralt-bold-webfont.woff2"), url("../assets/fonts/futuralt-webfont.woff2?k4uubo") format("woff");
-  font-weight: bold;
-  font-style: normal; }
-@font-face {
-  font-family: 'futuralt';
-  src: url("../assets/fonts/futuralt-light-webfont.woff2"), url("../assets/fonts/futuralt-webfont.woff2?k4uubo") format("woff");
-  font-weight: light;
-  font-style: normal; }
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-cabinet:before {
-  content: "\e03f"; }
-
-.icon-thumb-up:before {
-  content: "\e068"; }
-
-.icon-heart:before {
-  content: "\e08a"; }
-
-.icon-link:before {
-  content: "\e08d"; }
-
-.icon-search:before {
-  content: "\e090"; }
-
-.icon-plane:before {
-  content: "\e094"; }
-
-.icon-location:before {
-  content: "\e096"; }
-
-.icon-sync:before {
-  content: "\e098"; }
-
-.icon-sync-right:before {
-  content: "\e700"; }
-
-.icon-sync-left:before {
-  content: "\e701"; }
-
-.icon-bookmark:before {
-  content: "\e704"; }
-
-.icon-edit:before {
-  content: "\e713"; }
-
-.icon-cog:before {
-  content: "\e749"; }
-
-.icon-connection:before {
-  content: "\e755"; }
-
-.icon-download:before {
-  content: "\e763"; }
-
-.icon-upload:before {
-  content: "\e764"; }
-
-.icon-down:before {
-  content: "\e7cc"; }
-
-.icon-right:before {
-  content: "\e7cd"; }
-
-.icon-up:before {
-  content: "\e7ce"; }
-
-.icon-left:before {
-  content: "\e7cf"; }
-
-.icon-star:before {
-  content: "\e7d3"; }
-
-.icon-check:before {
-  content: "\e7d6"; }
-
-.icon-cross:before {
-  content: "\e7d7"; }
-
-.icon-minus:before {
-  content: "\e7d8"; }
-
-.icon-plus:before {
-  content: "\e7d9"; }
-
-.icon-more:before {
-  content: "\e7e4"; }
-
-.icon-time:before {
-  content: "\e7ee"; }
-
-.icon-calendar:before {
-  content: "\e867"; }
-
-.icon-clip:before {
-  content: "\e8b7"; }
-
-.icon-clip-tilted:before {
-  content: "\e8b8"; }
-
-.icon-news:before {
-  content: "\e8f9"; }
-
-.icon-phone:before {
-  content: "\e903"; }
-
-.icon-email:before {
-  content: "\e90a"; }
-
-.icon-chat:before {
-  content: "\e91b"; }
-
-.icon-play:before {
-  content: "\e6bb"; }
-
-.icon-screen:before {
-  content: "\e6ec"; }
-
-.icon-lock:before {
-  content: "\e71d"; }
-
-.icon-feed:before {
-  content: "\e76b"; }
-
-.icon-stats:before {
-  content: "\e770"; }
-
-.icon-menu:before {
-  content: "\e789"; }
-
-.icon-power:before {
-  content: "\e7b6"; }
-
-.icon-eye:before {
-  content: "\e7b9"; }
-
-.icon-target:before {
-  content: "\e7d0"; }
-
-.icon-image:before {
-  content: "\e89e"; }
-
-.icon-slide:before {
-  content: "\e8c4"; }
-
-.icon-glasses:before {
-  content: "\e8e0"; }
-
-.icon-menu_dark:before {
-  content: "\e600"; }
 
 @-moz-keyframes pulse {
   0% {
