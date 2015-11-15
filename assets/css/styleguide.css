@@ -8422,16 +8422,131 @@ button {
     -webkit-border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     -moz-border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem; }
-  .button i.fa,
-  button i.fa {
-    margin: 0 0.5rem;
+  .button i,
+  .button .fa,
+  button i,
+  button .fa {
+    margin: 0 0.5em;
     font-size: 0.825em; }
-    .button i.fa.fa-chevron-left,
-    button i.fa.fa-chevron-left {
-      margin: 0 0.5rem 0 -0.25rem; }
-    .button i.fa.fa-chevron-right,
-    button i.fa.fa-chevron-right {
-      margin: 0 -0.25rem 0 0.5rem; }
+    .button i.left, .button i.fa-chevron-left,
+    .button .fa.left,
+    .button .fa.fa-chevron-left,
+    button i.left,
+    button i.fa-chevron-left,
+    button .fa.left,
+    button .fa.fa-chevron-left {
+      margin: 0.425em 0.825em 0 -0.825em; }
+    .button i.right, .button i.fa-chevron-right,
+    .button .fa.right,
+    .button .fa.fa-chevron-right,
+    button i.right,
+    button i.fa-chevron-right,
+    button .fa.right,
+    button .fa.fa-chevron-right {
+      margin: 0.425em -0.825em 0 0.825em; }
+  .button.large,
+  button.large {
+    font-size: 1.25rem !important; }
+  .button.small,
+  button.small {
+    font-size: 0.8125rem !important; }
+  .button.tiny,
+  button.tiny {
+    font-size: 0.6875rem !important; }
+  .button.compact,
+  button.compact {
+    font-size: 0.6875rem !important;
+    padding: 0.35em 1.5em 0.4em; }
+
+.hollow {
+  border: 1px solid #079493 !important;
+  color: #079493;
+  background-color: transparent;
+  font-size: 14.8564px;
+  -webkit-box-shadow: 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+  font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.0075em;
+  -webkit-font-smoothing: antialiased;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  transition: all 0.3s ease-in-out;
+  padding: 0.7rem 2.5rem 0.9rem; }
+  .hollow:hover {
+    border: 1px solid #056363 !important;
+    color: #056363 !important;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent; }
+  .hollow:active, .hollow:focus {
+    background-color: white; }
+  .hollow.primary {
+    border: 1px solid #079493 !important;
+    color: #079493;
+    background-color: transparent;
+    font-size: 14.8564px;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.0075em;
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    transition: all 0.3s ease-in-out; }
+    .hollow.primary:hover {
+      border: 1px solid #056363 !important;
+      color: #056363 !important;
+      background-color: rgba(255, 255, 255, 0.2);
+      -webkit-box-shadow: 0 0 0 transparent;
+      -moz-box-shadow: 0 0 0 transparent;
+      box-shadow: 0 0 0 transparent; }
+    .hollow.primary:active, .hollow.primary:focus {
+      background-color: white; }
+    .hollow.primary:hover, .hollow.primary:active {
+      background-color: #079493;
+      border-color: transparent !important;
+      color: white !important; }
+  .hollow.secondary {
+    border: 1px solid #ecedf3 !important;
+    color: #ecedf3;
+    background-color: transparent;
+    font-size: 14.8564px;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    font-family: "futura-pt", "futura-regular", Futura, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.0075em;
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    transition: all 0.3s ease-in-out;
+    border-color: #ecedf3 !important;
+    color: #969ca3 !important; }
+    .hollow.secondary:hover {
+      border: 1px solid #cdcfdf !important;
+      color: #cdcfdf !important;
+      background-color: rgba(255, 255, 255, 0.2);
+      -webkit-box-shadow: 0 0 0 transparent;
+      -moz-box-shadow: 0 0 0 transparent;
+      box-shadow: 0 0 0 transparent; }
+    .hollow.secondary:active, .hollow.secondary:focus {
+      background-color: white; }
+    .hollow.secondary:hover {
+      color: #7c939d !important;
+      border-color: #bbbcc7 !important;
+      background-color: transparent; }
+  .hollow[disabled], .hollow.disabled {
+    border-color: transparent !important;
+    cursor: not-allowed; }
 
 button.disabled,
 button[disabled],
@@ -8440,9 +8555,9 @@ button[disabled],
   background-color: #dfdfdf;
   color: #95a5a6;
   opacity: 0.7;
-  cursor: text;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none;
+  cursor: not-allowed; }
   button.disabled:hover, button.disabled:active,
   button[disabled]:hover,
   button[disabled]:active,
