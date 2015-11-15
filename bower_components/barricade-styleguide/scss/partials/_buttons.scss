@@ -31,6 +31,9 @@ button {
   padding-top: 0.7rem;
   padding-bottom: 0.9rem;
 
+
+  // style variants
+
   &.secondary {
     @include button($light3);
     color: $grey2;
@@ -52,17 +55,94 @@ button {
     @include border-radius(1.5rem, 1.5rem);
   }
 
-  i.fa {
-    margin: 0 0.5rem;
+  // contains an icon
+
+  i,
+  .fa {
+    margin: 0 0.5em;
     font-size: 0.825em;
 
+    &.left,
     &.fa-chevron-left {
-      margin: 0 0.5rem 0 -0.25rem;
+      margin: 0.425em 0.825em 0 -0.825em;
     }
 
+    &.right,
     &.fa-chevron-right {
-      margin: 0 -0.25rem 0 0.5rem;
+      margin: 0.425em -0.825em 0 0.825em;
     }
+  }
+
+  // size variants
+  &.large {
+    font-size: 1.25rem !important;
+  }
+  &.small {
+    font-size: 0.8125rem !important;
+  }
+  &.tiny {
+    font-size: 0.6875rem !important;
+  }
+  &.compact {
+    font-size: 0.6875rem !important;
+    padding: 0.35em 1.5em 0.4em;
+  }
+}
+
+@mixin buttonHollow($color) {
+  border: 1px solid $color !important;
+  color: $color;
+  background-color: transparent;
+  font-size: $scalex2;
+  @include box-shadow(0,0,0,transparent);
+  @include futuraRegular;
+  @include border-radius(3px, 3px);
+  @include transition(all, 0.3s, ease-in-out);
+
+  &:hover {
+    border: 1px solid darken($color, 10%) !important;
+    color: darken($color, 10%) !important;
+    background-color: rgba(255,255,255,0.2);
+    @include box-shadow(0,0,0,transparent);
+  }
+
+  &:active,
+  &:focus {
+    background-color: white;
+  }
+}
+
+.hollow {
+  @include buttonHollow($green3);
+  padding: 0.7rem 2.5rem 0.9rem;
+
+  &.primary {
+    @include buttonHollow($green3);
+
+    &:hover,
+    &:active {
+      background-color: $green3;
+      border-color: transparent !important;
+      color: white !important;
+    }
+  }
+
+  &.secondary {
+    @include buttonHollow($light2);
+    border-color: $light2 !important;
+    color: $mid3 !important;
+
+    &:hover {
+      color: $mid5 !important;
+      border-color: $mid1 !important;
+      background-color: transparent;
+    }
+  }
+
+  &[disabled],
+  &.disabled {
+    border-color: transparent !important;
+    cursor: not-allowed;
   }
 }
 
@@ -73,9 +153,9 @@ button[disabled],
   background-color: $light3;
   color: $mid4;
   opacity: 0.7;
-  cursor: text;
   -webkit-box-shadow: none;
   box-shadow: none;
+  cursor: not-allowed;
 
   &:hover,
   &:active {
